@@ -1,59 +1,88 @@
-# LidiaLiaoLanding
+# Lidia Liao · Landing page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Landing profesional para Lidia Liao, fisioterapeuta y readaptadora deportiva. Presenta sus áreas de especialización, experiencia y vías de contacto mediante una interfaz limpia, accesible y adaptable a distintos tamaños de pantalla.
 
-## Development server
+## Tecnologías
 
-To start a local development server, run:
+- Angular 22
+- Componentes standalone
+- TypeScript
+- CSS nativo
+- npm
 
-```bash
-ng serve
-```
+El proyecto no utiliza routing, SSR, backend ni librerías visuales externas.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Requisitos
 
-## Code scaffolding
+- Node.js 24.15 o posterior dentro de la rama 24
+- npm 11 o compatible
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Las versiones utilizadas durante el desarrollo han sido Node.js `24.19.0` y npm `11.17.0`.
 
-```bash
-ng generate component component-name
-```
+## Instalación y ejecución
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Instala las dependencias:
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Inicia el servidor de desarrollo:
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+La aplicación estará disponible en [http://localhost:4200](http://localhost:4200).
 
-For end-to-end (e2e) testing, run:
+## Comandos disponibles
 
 ```bash
-ng e2e
+npm start       # Servidor de desarrollo
+npm run build   # Build optimizado para producción
+npm run watch   # Build de desarrollo en modo observación
+npm test        # Ejecuta las pruebas configuradas por Angular
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+El resultado del build de producción se genera en:
 
-## Additional Resources
+```text
+dist/lidia-liao-landing
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Estructura principal
+
+```text
+src/
+├── app/
+│   ├── about/       # Sección Sobre mí
+│   ├── contact/     # Sección de contacto
+│   ├── hero/        # Presentación principal
+│   ├── services/    # Especialidades y servicios
+│   ├── app.html     # Cabecera, navegación y footer
+│   ├── app.css
+│   └── app.ts
+├── index.html
+├── main.ts
+└── styles.css       # Variables, reset y estilos compartidos
+```
+
+Cada sección principal es un componente standalone con su propio HTML y CSS. El componente raíz se encarga únicamente de componer la página y mostrar la cabecera, la navegación y el footer.
+
+## Contenido provisional
+
+La sección de contacto contiene datos claramente identificados como ejemplos:
+
+- teléfono;
+- correo electrónico;
+- perfil de Instagram.
+
+Estos valores deben sustituirse por los datos reales antes de publicar la web. El favicon y el símbolo tipográfico `LL` también pueden reemplazarse cuando estén disponibles los recursos definitivos de marca.
+
+## Producción
+
+Antes de publicar:
+
+1. Sustituye los datos de contacto provisionales.
+2. Ejecuta `npm run build` y comprueba que termina sin errores ni advertencias.
+3. Publica el contenido generado en `dist/lidia-liao-landing` mediante el servicio de alojamiento elegido.
