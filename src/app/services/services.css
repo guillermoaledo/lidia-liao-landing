@@ -1,0 +1,118 @@
+:host {
+  display: block;
+}
+.specialties {
+  padding: 104px 24px 112px;
+  background: linear-gradient(180deg, #f8faf9 0%, #f3f6f4 100%);
+  scroll-margin-top: 100px;
+}
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+.section-heading h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+.section-heading > p:last-child {
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+.specialties__grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.specialty-card {
+  grid-column: span 2;
+  min-height: 270px;
+  padding: 32px 26px;
+  border: 1px solid rgba(218, 226, 222, 0.88);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+.specialty-card:hover {
+  border-color: #adc6bd;
+  transform: translateY(-5px);
+}
+.specialty-card__number {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--green-dark);
+  background: var(--green-pale);
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+}
+.specialty-card h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.specialty-card h3::after {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin-top: 16px;
+  content: '';
+  background: var(--green);
+}
+.specialty-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .specialties__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .specialty-card {
+    grid-column: auto;
+  }
+  .specialty-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    justify-self: center;
+  }
+}
+@media (max-width: 680px) {
+  .specialties {
+    padding: 76px 18px 82px;
+  }
+  .specialties__grid {
+    grid-template-columns: 1fr;
+  }
+  .specialty-card,
+  .specialty-card:last-child {
+    grid-column: auto;
+    width: auto;
+    min-height: 0;
+  }
+  .specialty-card__number {
+    margin-bottom: 28px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .specialty-card {
+    transition: none;
+  }
+}
