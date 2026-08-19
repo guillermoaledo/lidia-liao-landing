@@ -13,7 +13,7 @@
 .hero__content {
   align-self: center;
   max-width: 680px;
-  padding: 88px clamp(36px, 6vw, 92px) 64px max(48px, calc((100vw - 1180px) / 2));
+  padding: 0 40px;
 }
 .hero h1 {
   margin: 0;
